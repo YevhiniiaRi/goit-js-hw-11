@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  padding-bottom: 40px;
+  background-color: white;
+}
+
+.search-form {
+  padding: 40px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form > input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  transition: border 250ms ease-in-out;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.search-form > input:hover,
+.search-form > input:focus {
+  border: 1px solid gray;
+  outline: none;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+button:hover,
+button:focus {
+  color: white;
+  background-color: black;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 40px;
+}
+
+.gallery__item {
+  text-decoration: none;
+  color: currentColor;
+  max-width: 340px;
+  overflow: hidden;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.gallery__image {
+  display: block;
+  object-fit: cover;
+  filter: grayscale(0.15);
+  transition: filter 250ms ease-in-out;
+}
+.gallery__item:hover .gallery__image {
+  filter: grayscale(0) brightness(1.15);
+}
+
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
